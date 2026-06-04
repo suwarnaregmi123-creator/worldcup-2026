@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2026 FIFA World Cup - Tournament Information</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1>🏆 2026 World Cup</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#overview" class="nav-link active" data-section="overview">Overview</a></li>
+                <li><a href="#schedule" class="nav-link" data-section="schedule">Schedule</a></li>
+                <li><a href="#teams" class="nav-link" data-section="teams">Teams</a></li>
+                <li><a href="#groups" class="nav-link" data-section="groups">Groups</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- Overview Section -->
+        <section id="overview" class="section active">
+            <h2>Tournament Overview</h2>
+            <div class="overview-grid">
+                <div class="overview-card">
+                    <h3>📅 Dates</h3>
+                    <p>June 11 - July 19, 2026</p>
+                </div>
+                <div class="overview-card">
+                    <h3>🌍 Host Countries</h3>
+                    <p>USA, Mexico, Canada</p>
+                </div>
+                <div class="overview-card">
+                    <h3>🏟️ Venues</h3>
+                    <p>16+ Stadiums</p>
+                </div>
+                <div class="overview-card">
+                    <h3>⚽ Teams</h3>
+                    <p>48 Teams</p>
+                </div>
+                <div class="overview-card">
+                    <h3>🎯 Matches</h3>
+                    <p>80 Matches Total</p>
+                </div>
+                <div class="overview-card">
+                    <h3>📊 Format</h3>
+                    <p>12 Groups of 4</p>
+                </div>
+            </div>
+
+            <div class="format-section">
+                <h3>Tournament Format</h3>
+                <ul class="format-list">
+                    <li><strong>Group Stage:</strong> 48 teams in 12 groups of 4</li>
+                    <li><strong>Knockout Round:</strong> Top 2 from each group (32 teams)</li>
+                    <li><strong>Round of 32:</strong> 16 matches</li>
+                    <li><strong>Round of 16:</strong> 8 matches</li>
+                    <li><strong>Quarterfinals:</strong> 4 matches</li>
+                    <li><strong>Semifinals:</strong> 2 matches</li>
+                    <li><strong>Final & 3rd Place:</strong> Championship + Bronze medal match</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Schedule Section -->
+        <section id="schedule" class="section">
+            <h2>Tournament Schedule</h2>
+            <div class="schedule-filters">
+                <button class="filter-btn active" data-filter="all">All Stages</button>
+                <button class="filter-btn" data-filter="group">Group Stage</button>
+                <button class="filter-btn" data-filter="knockout">Knockout</button>
+            </div>
+
+            <div class="schedule-grid">
+                <!-- Group Stage -->
+                <div class="schedule-card" data-stage="group">
+                    <h3>⚽ Group Stage</h3>
+                    <p><strong>Dates:</strong> June 11-27, 2026</p>
+                    <p><strong>Matches:</strong> 48</p>
+                    <p>All 48 teams compete in 12 groups of 4. Each team plays 3 matches.</p>
+                </div>
+
+                <!-- Round of 32 -->
+                <div class="schedule-card" data-stage="knockout">
+                    <h3>🎯 Round of 32</h3>
+                    <p><strong>Dates:</strong> June 28 - July 3, 2026</p>
+                    <p><strong>Matches:</strong> 16</p>
+                    <p>Top 2 teams from each group qualify.</p>
+                </div>
+
+                <!-- Round of 16 -->
+                <div class="schedule-card" data-stage="knockout">
+                    <h3>🔥 Round of 16</h3>
+                    <p><strong>Dates:</strong> July 4-7, 2026</p>
+                    <p><strong>Matches:</strong> 8</p>
+                    <p>Winners from Round of 32 advance.</p>
+                </div>
+
+                <!-- Quarterfinals -->
+                <div class="schedule-card" data-stage="knockout">
+                    <h3>💪 Quarterfinals</h3>
+                    <p><strong>Dates:</strong> July 9-11, 2026</p>
+                    <p><strong>Matches:</strong> 4</p>
+                    <p>Final 8 teams battle for semifinals.</p>
+                </div>
+
+                <!-- Semifinals -->
+                <div class="schedule-card" data-stage="knockout">
+                    <h3>🌟 Semifinals</h3>
+                    <p><strong>Dates:</strong> July 14-15, 2026</p>
+                    <p><strong>Matches:</strong> 2</p>
+                    <p>Last 4 teams compete for the final.</p>
+                </div>
+
+                <!-- Final & 3rd Place -->
+                <div class="schedule-card" data-stage="knockout">
+                    <h3>🏆 Final & 3rd Place</h3>
+                    <p><strong>Dates:</strong> July 18-19, 2026</p>
+                    <p><strong>Matches:</strong> 2</p>
+                    <p>Championship match and bronze medal match.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Teams Section -->
+        <section id="teams" class="section">
+            <h2>All 48 Teams</h2>
+            <div class="teams-controls">
+                <input type="text" id="team-search" placeholder="🔍 Search teams...">
+                <select id="confederation-filter">
+                    <option value="">All Confederations</option>
+                    <option value="UEFA">UEFA (Europe) - 16</option>
+                    <option value="CONMEBOL">CONMEBOL (South America) - 6</option>
+                    <option value="AFC">AFC (Asia) - 8</option>
+                    <option value="CAF">CAF (Africa) - 9</option>
+                    <option value="CONCACAF">CONCACAF (N/C America) - 6</option>
+                    <option value="OFC">OFC (Oceania) - 1</option>
+                </select>
+            </div>
+            <div id="teams-grid" class="teams-grid"></div>
+        </section>
+
+        <!-- Groups Section -->
+        <section id="groups" class="section">
+            <h2>Group Stage Draw</h2>
+            <div id="groups-grid" class="groups-grid"></div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 FIFA World Cup Information Portal | Built with ❤️</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
